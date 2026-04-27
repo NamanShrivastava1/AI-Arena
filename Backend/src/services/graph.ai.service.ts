@@ -82,7 +82,7 @@ const judgeNode: GraphNode<typeof state> = async (state) => {
   };
 };
 
-const graph = new StateGraph(state)
+const graph: any = new StateGraph(state)
   .addNode("solution", solutionNode)
   .addNode("judge_node", judgeNode)
   .addEdge(START, "solution")

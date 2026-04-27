@@ -5,7 +5,7 @@ const app = express();
 app.use(express.json());
 
 app.get("/", async (req, res) => {
-  const result = await runGraph("Write an code for Factorial function in js");
+  const result = await runGraph("What is the capital of France?");
 
   res.json(result);
 });
