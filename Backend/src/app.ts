@@ -13,9 +13,10 @@ app.use(
 );
 
 app.get("/", async (req, res) => {
-  const result = await runGraph("Write an code for Factorial function in js");
-
-  res.json(result);
+  res.status(200).json({
+    message: "Welcome to the AI BATTLE ARENA.",
+    success: true,
+  });
 });
 
 app.post("/invoke", async (req, res) => {
