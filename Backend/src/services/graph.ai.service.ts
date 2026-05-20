@@ -43,6 +43,7 @@ const judgeNode: GraphNode<typeof state> = async (state) => {
 
   const judge = createAgent({
     model: geminiModel,
+    // providerStrategy: I want STRICTLY this structure
     responseFormat: providerStrategy(
       z.object({
         solution_1_score: z.number().min(0).max(10),
